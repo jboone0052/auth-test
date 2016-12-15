@@ -1,20 +1,30 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from './auth.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html'
 })
 export class RegisterComponent implements OnInit {
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() { }
 
-  username: string = "";
+  email: string = "";
   password: string= "";
 
+  error: Boolean = false;
+  errorMessage = "";
   submit(form) {
-    console.log(this.username);
-    console.log(this.password);
-    this.authService.register(this.username, this.password);
+    this.error = false;
+    this.authService.register(this.email, this.password).
+        subscribe(data => {
+          if (data.token.length > 0){
+            this.router.navigateByUrl('/dashboard')
+          }
+        }, errorMsg => {
+          this.error = true;
+          this.errorMessage = errorMsg;
+        });
   }
 }

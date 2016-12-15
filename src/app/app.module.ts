@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { provideAuth } from 'angular2-jwt';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -13,6 +14,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { routing } from './app.routes';
 import { AuthService } from './auth/auth.service';
 import { AuthGuard } from './auth/authguard.service';
+import { DashboardService } from './dashboard/dashboard.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,11 @@ import { AuthGuard } from './auth/authguard.service';
     RouterModule,
     routing
   ],
-  providers: [AuthService, AuthGuard],
+  providers: [AuthService, AuthGuard, provideAuth({
+    tokenName: 'token',
+    headerPrefix: 'JWT',
+    tokenGetter: () => localStorage.getItem("token")
+  }), DashboardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
