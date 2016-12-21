@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-md-4">
+    <app-age-filter (ageFilterChange)="onAgeFilterChange($event)"></app-age-filter>
+  </div>
+  <div class="col-md-8">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    <div *ngFor="let product of products | paginate: {itemsPerPage: pageSize, currentPage: p}" class="col-md-4  col-sm-6">
+      <div class="product-details">
+        <div class="product-media light-bg">
+          <span class="light-bg">
+              <img class="thumbnail" [src]="product.img" alt="">
+          </span>
+        </div>
+        <div class="product-content">
+          <div class="product-name">
+            <p> <a href="#">{{product.name}}</a> </p>
+          </div>
+          <div class="product-price">
+            <h4 class="pink-btn-small"> {{product.price | currency:'USD':true:'1.2-2' }} </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+
+
+<div class="alert alert-success" *ngIf="success">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true" >&times;</button>
+  <strong>Success!</strong> Product added successfully
+</div>
+<div class="alert alert-danger" *ngIf="error">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true" >&times;</button>
+  <strong>Error!</strong> {{ errorMessage }}
+</div>
+
+<form #form (ngSubmit)="submit(form)" role="form">
+  <legend>Add Product</legend>
+
+  <div class="form-group">
+    <label for="img">Image</label>
+    <input type="text" class="form-control" name="img" [(ngModel)]="newProduct.img" id="img" placeholder="Image url">
+  </div>
+<div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" name="name" [(ngModel)]="newProduct.name" id="name" placeholder="Name">
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <input type="text" class="form-control" name="description" [(ngModel)]="newProduct.description" id="description" placeholder="Description">
+  </div>
+  <div class="form-group">
+    <label for="price">Price</label>
+    <input type="text" class="form-control" name="price" [(ngModel)]="newProduct.price" id="price" placeholder="Price">
+  </div>
+  <div class="form-group">
+    <label for="age">Age</label>
+    <input type="text" class="form-control" name="age" [(ngModel)]="newProduct.age" id="age" placeholder="Age">
+  </div>
+  <button type="submit" class="btn btn-primary" >Submit</button>
+</form>

@@ -1,0 +1,35 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'c:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Users\\jboone\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'start' ]
+2 info using npm@4.0.2
+3 info using node@v4.4.2
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info lifecycle authtests@0.0.0~prestart: authtests@0.0.0
+6 silly lifecycle authtests@0.0.0~prestart: no script for prestart, continuing
+7 info lifecycle authtests@0.0.0~start: authtests@0.0.0
+8 verbose lifecycle authtests@0.0.0~start: unsafe-perm in lifecycle true
+9 verbose lifecycle authtests@0.0.0~start: PATH: C:\Users\jboone\AppData\Roaming\npm\node_modules\npm\bin\node-gyp-bin;C:\Users\jboone\OneDrive\tutorials\authtests\node_modules\.bin;c:\programdata\oracle\java\javapath;(c:\windows\system32;c:\windows;c:\windows\system32\wbem;c:\windows\system32\windowspowershell\v1.0\;c:\program files\intel\wifi\bin\;c:\program files\common files\intel\wirelesscommon\;c:\program files (x86)\common files\roxio shared\oem\dllshared\;c:\program files (x86)\common files\roxio shared\oem\dllshared\;c:\program files (x86)\common files\roxio shared\oem\12.0\dllshared\;c:\program files (x86)\roxio\oem\audiocore\;c:\program files (x86)\windows live\shared;c:\program files (x86)\microsoft sql server\100\tools\binn\;c:\program files\microsoft sql server\100\tools\binn\;c:\program files\microsoft sql server\100\dts\binn\;c:\program files\microsoft network monitor 3\;c:\windows\system32\windows system resource manager\bin;c:\program files (x86)\gs\gs8.64\bin;c:\program files (x86)\common files\acronis\snapapi\;c:\program files\microsoft sql server\110\tools\binn\;c:\program files\microsoft\web platform installer\;c:\windows\idmu\common;c:\program files (x86)\ati technologies\ati.ace\core-static;c:\program files (x86)\amd\ati.ace\core-static;c:\program files (x86)\intel\opencl sdk\3.0\bin\x86;c:\program files (x86)\intel\opencl sdk\3.0\bin\x64;c:\program files (x86)\microsoft sql server\100\dts\binn\;c:\program files (x86)\microsoft sdks\typescript\1.0\;c:\program files\microsoft sql server\120\tools\binn\;c:\program files\git\cmd;c:\program files (x86)\microsoft sql server\client sdk\odbc\110\tools\binn\;c:\program files\nodejs\;c:\windows\system32;c:\program files (x86)\microsoft sql server\120\tools\binn\managementstudio\;c:\program files (x86)\microsoft sql server\120\tools\binn\;c:\program files (x86)\microsoft sql server\120\dts\binn\;c:\program files (x86)\skype\phone\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files (x86)\Dell\AdvDiags\DSET\bin;C:\Program Files (x86)\Dell\AdvDiags\DSET\bin\Lib;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files (x86)\Admin Arsenal\PDQ Inventory\;C:\Program Files (x86)\Brackets\command;C:\Ruby23-x64\bin;C:\Users\jboone\.dnx\runtimes\dnx-clr-win-x86.1.0.0-rc1-update2\bin;C:\Users\jboone\.dnx\bin;C:\Program Files (x86)\Nmap;C:\Program Files (x86)\Git\bin;C:\Program Files (x86)\Git\cmd;C:\Users\jboone\AppData\Roaming\npm;c:\Program Files\MongoDB\Server\3.2\bin;C:\Program Files (x86)\Microsoft VS Code\bin
+10 verbose lifecycle authtests@0.0.0~start: CWD: C:\Users\jboone\OneDrive\tutorials\authtests
+11 silly lifecycle authtests@0.0.0~start: Args: [ '/d /s /c', 'ng serve' ]
+12 verbose stack Error: kill ENOSYS
+12 verbose stack     at exports._errnoException (util.js:870:11)
+12 verbose stack     at process.kill (node.js:777:15)
+12 verbose stack     at process.listener (C:\Users\jboone\AppData\Roaming\npm\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:86:15)
+12 verbose stack     at emitNone (events.js:72:20)
+12 verbose stack     at process.emit (events.js:166:7)
+12 verbose stack     at processEmit (C:\Users\jboone\AppData\Roaming\npm\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+12 verbose stack     at processEmit (C:\Users\jboone\AppData\Roaming\npm\node_modules\npm\node_modules\npm-registry-client\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+12 verbose stack     at Signal.wrap.onsignal (node.js:804:46)
+13 verbose cwd C:\Users\jboone\OneDrive\tutorials\authtests
+14 error Windows_NT 6.1.7601
+15 error argv "c:\\Program Files\\nodejs\\node.exe" "C:\\Users\\jboone\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "start"
+16 error node v4.4.2
+17 error npm  v4.0.2
+18 error code ENOSYS
+19 error errno ENOSYS
+20 error syscall kill
+21 error kill ENOSYS
+22 error If you need help, you may report this error at:
+22 error     <https://github.com/npm/npm/issues>
+23 verbose exit [ 1, true ]
